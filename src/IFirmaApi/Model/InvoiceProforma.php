@@ -21,7 +21,7 @@ class InvoiceProforma extends InvoiceBase {
         }
 
         // required
-        $this->data['LiczOd'] = 'NET';
+        $this->data['LiczOd'] = 'BRT';
         $this->data['TypFakturyKrajowej'] = 'SPRZ';
         $this->data['DataWystawienia'] = $date;
         $this->data['SposobZaplaty'] = 'PRZ';

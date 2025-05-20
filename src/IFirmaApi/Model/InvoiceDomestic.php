@@ -23,7 +23,7 @@ class InvoiceDomestic extends InvoiceBase {
 
         // required
         $this->data['Zaplacono'] = 0;
-        $this->data['LiczOd'] = 'NET';
+        $this->data['LiczOd'] = 'BRT';
         $this->data['DataWystawienia'] = $date;
         // $this->data['DataOtrzymaniaZaplaty'] = ''; // ???
         $this->data['DataSprzedazy'] = $date;
