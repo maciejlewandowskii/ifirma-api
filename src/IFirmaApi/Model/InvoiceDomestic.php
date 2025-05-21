@@ -15,14 +15,15 @@ class InvoiceDomestic extends InvoiceBase {
      * @param string $clientNipPrefix
      * @param string $clientId
      */
-    public function __construct($clientNip, $date = 'today', $daysForPay = NULL, $clientNipPrefix = '', $clientId = '' ) {
+    public function __construct($clientNip, $date = 'today', $daysForPay = NULL, $clientNipPrefix = '', $clientId = '', $payment = 0) {
 
         if( $date == 'today' ) {
             $date = date('Y-m-d');
         }
 
         // required
-        $this->data['Zaplacono'] = 0;
+        $this->data['Zaplacono'] = $payment;
+        $this->data['ZaplaconoNaDokumencie'] = $payment;
         $this->data['LiczOd'] = 'BRT';
         $this->data['DataWystawienia'] = $date;
         // $this->data['DataOtrzymaniaZaplaty'] = ''; // ???
